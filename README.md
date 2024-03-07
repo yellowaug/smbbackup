@@ -1,6 +1,6 @@
-#SMB共享文件夹备份
+# SMB共享文件夹备份
 
-##Python环境
+## Python环境
 我的开发环境python 版本是3.10 
 
 我的运行环境是Windows 10
