@@ -6,12 +6,12 @@ import sys
 
 
 # 配置你的SMB备份设置
-def callbakup_action(fload):
-    smb_backup = BackupSMB("test") #传入要备份的共享文件夹的名称
+def callbakup_action(folder):
+    smb_backup = BackupSMB(folder) #传入要备份的共享文件夹的名称
     # smb_backup.backup(r"D:\testbak")
-    smb_server_path = f"\\\\{smb_backup.backup_host}\\\\{smb_backup.backup_path}"  # 检索的目录
+    smb_server_path = f"\\\\{smb_backup.backup_host}\\\\{smb_backup.backup_floder_name}"  # 检索的目录
     # time_tamp=smb_backup.getRemoteFileStatFinalChangeTime(smb_server_path)
-    smb_backup.copy_files(smb_server_path,r"D:\testbak") #备份文件
+    smb_backup.copy_files(smb_server_path) #备份文件
 
     smb_backup.close_session() #关闭连接
 if __name__=='__main__':
